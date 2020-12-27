@@ -1,6 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django import forms
-# from .models import User
+from .models import User
 
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(label = "Email")

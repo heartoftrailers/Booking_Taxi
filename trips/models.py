@@ -1,7 +1,7 @@
 from django.db import models
 # from address.models import AddressField
-from users.models import Driver
-from django.contrib.auth.models import User
+from users.models import Driver, User
+
 
 # Create your models here.
 
@@ -10,7 +10,7 @@ class Trip(models.Model):
         ('1', 'Card'),
         ('2', 'Cash'),
     )
-    customer = models.OneToOneField(User ,on_delete=models.CASCADE)
+    customer = models.ForeignKey(User ,on_delete=models.CASCADE)
     pick_up_time = models.DateTimeField(blank=False, null=False)
     pick_up_place = models.CharField(max_length=80, blank=False, null=False)
     drop_off_place = models.CharField(max_length=80, blank=False, null=False)
