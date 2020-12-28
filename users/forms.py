@@ -9,8 +9,8 @@ class RegisterForm(UserCreationForm):
     last_name = forms.CharField(label= "Last Name")
 
 
-    # class Meta:
-    #     model = User
-    #     fields = ("first_name", "last_name", "email", "phone_number")
+    class Meta:
+        model = User
+        fields = ("first_name", "last_name", "email", "phone_number")
 
 # We dont put the login form here because the build-in django login form is enough!
